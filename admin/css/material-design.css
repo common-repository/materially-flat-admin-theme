@@ -1,0 +1,1008 @@
+
+html, #wpwrap {
+  background: #fff;
+}
+
+/* Links */ 
+a {
+  color: #0073aa;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0096dd;
+}
+
+#media-upload a.del-link:hover,
+div.dashboard-widget-submit input:hover,
+.subsubsub a:hover,
+.subsubsub a.current:hover {
+  color: #0096dd;
+}
+
+.wp-core-ui input[type="reset"]:hover,
+.wp-core-ui input[type="reset"]:active {
+  color: #0096dd;
+}
+
+/**
+* Ripples
+*/
+.withripple {
+  position: relative;
+}
+.ripple-container, #wpadminbar .ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+       -o-transform-origin: 50%;
+          transform-origin: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.ripple.ripple-on {
+  -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+       -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+          transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  opacity: 0.1;
+}
+.ripple.ripple-out {
+  -webkit-transition: opacity 0.1s linear 0s !important;
+       -o-transition: opacity 0.1s linear 0s !important;
+          transition: opacity 0.1s linear 0s !important;
+  opacity: 0;
+}
+/**
+* Link
+*/
+a{
+    text-decoration: none;
+}
+/**
+    Containers
+*/
+.welcome-panel, #screen-meta, .theme-browser .theme,
+.widgets-holder-wrap, #menu-management .menu-edit,
+#menu-settings-column .accordion-container, .card{
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    border: 0;
+}
+.postbox, .media-toolbar, .manage-menus{
+    border-radius: 2px;
+    border: 0;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+}
+.postbox{
+    padding-bottom: 10px;
+}
+.postbox .hndle, #nav-menu-header{
+    border: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/**
+* Buttons
+*/
+.wp-core-ui .button-primary,
+.wp-core-ui .button-secondary{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.wp-core-ui .button, .wp-core-ui .button-primary,
+.wp-core-ui .button-secondary, .wrap .add-new-h2, 
+.wrap .page-title-action, #add-new-comment a, 
+.tablenav .tablenav-pages a, .wp-admin .button-cancel,
+.media-frame a.button-primary,
+.wp-core-ui .button-primary[disabled],
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary.button-primary-disabled,
+.wp-core-ui .button-primary.disabled{
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    will-change: box-shadow, transform;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.wp-core-ui .button-primary:active, .wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:hover, .wp-core-ui .button-secondary:active,
+.wp-core-ui .button-secondary:focus, .wp-core-ui .button-secondary:hover,
+.wp-core-ui .button.button-primary.button-hero,
+.wp-core-ui .button.button-primary.button-hero.active,
+.wp-core-ui .button.button-primary.button-hero.active:focus,
+.wp-core-ui .button.button-primary.button-hero.active:hover,
+.wp-core-ui .button.button-primary.button-hero:active{
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.wp-core-ui .button-primary[disabled],
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary.button-primary-disabled,
+.wp-core-ui .button-primary.disabled{
+    color: rgba(0, 0, 0, 0.26)!important;
+    background: transparent!important;
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .65;
+    -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.wp-admin .button-cancel{
+    display: inline-block;
+    line-height: 26px;
+    height: 28px;
+    padding: 0 10px 1px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.wp-admin .button-cancel:hover,
+.wp-admin .button-cancel:focus,
+.wp-admin .button-cancel:active{
+    background-color: rgba(153, 153, 153, 0.2);
+}
+
+/**
+* Input Box and TextArea
+*/
+.form-table td fieldset label.mfat-wrapping, 
+.columns-prefs label.mfat-wrapping{
+    margin: 0 0 0 0!important;
+    padding: 0 0 0 0!important;
+}
+input[type=text], input[type=email], input[type=url],
+input[type=search], input[type=password], input[type=tel],
+input[type=number], select, select[multiple], textarea,
+.form-field input[type=text], .form-field input[type=password],
+.form-field input[type=email], .form-field input[type=number],
+.form-field input[type=tel], .form-field input[type=url],
+.form-field input[type=search], .form-field select, 
+.form-field select[multiple], .form-field textarea,
+.media-frame input[type=text], .media-frame input[type=password],
+.media-frame input[type=email], .media-frame input[type=number],
+.media-frame input[type=tel], .media-frame input[type=url],
+.media-frame input[type=search], .media-frame select, 
+.media-frame select[multiple], .media-frame textarea,
+textarea#description, textarea#group_description{
+    border: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
+    -webkit-background-size: 0 2px, 100% 1px;
+            background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center -webkit-calc(100% - 1px);
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background 0s ease-out;
+        -o-transition: background 0s ease-out;
+            transition: background 0s ease-out;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    padding: 7px 2px;
+}
+.media-frame .attachments-browser input[type=text],
+.media-frame .attachments-browser input[type=password],
+.media-frame .attachments-browser input[type=email],
+.media-frame .attachments-browser input[type=number],
+.media-frame .attachments-browser input[type=tel],
+.media-frame .attachments-browser input[type=url],
+.media-frame .attachments-browser input[type=search],
+.media-frame .attachments-browser select,
+.media-frame .attachments-browser select[multiple],
+.media-frame .attachments-browser textarea{
+    border-width: 0;
+    color: #32373c;
+}
+input[type=text]:focus, input[type=text]:active,
+input[type=email]:focus, input[type=email]:active,
+input[type=url]:focus, input[type=url]:active,
+input[type=search]:focus, input[type=search]:active,
+input[type=password]:focus, input[type=password]:active,
+input[type=number]:focus, input[type=number]:active,
+input[type=tel]:focus, input[type=tel]:active,
+select:focus, select:active, select[multiple]:focus,
+select[multiple]:active, textarea:focus, textarea:active,
+.form-field input[type=text]:focus, .form-field input[type=text]:active,
+.form-field input[type=password]:focus, .form-field input[type=password]:active,
+.form-field input[type=email]:focus, .form-field input[type=email]:active,
+.form-field input[type=number]:focus, .form-field input[type=number]:active,
+.form-field input[type=tel]:focus, .form-field input[type=tel]:active,
+.form-field input[type=url]:focus, .form-field input[type=url]:active,
+.form-field input[type=search]:focus, .form-field input[type=search]:active,
+.form-field select:focus, .form-field select:active, 
+.form-field select[multiple]:focus, .form-field select[multiple]:active,
+.form-field textarea:focus, .form-field textarea:active,
+.media-frame input[type=text]:focus, .media-frame input[type=text]:active,
+.media-frame input[type=password]:focus, .media-frame input[type=password]:active,
+.media-frame input[type=email]:focus, .media-frame input[type=email]:active,
+.media-frame input[type=number]:focus, .media-frame input[type=number]:active,
+.media-frame input[type=tel]:focus, .media-frame input[type=tel]:active,
+.media-frame input[type=url]:focus, .media-frame input[type=url]:active,
+.media-frame input[type=search]:focus, .media-frame input[type=search]:active,
+.media-frame select:focus, .media-frame select:active, 
+.media-frame select[multiple]:focus, .media-frame select[multiple]:active,
+.media-frame textarea:focus, .media-frame textarea:active,
+textarea#description:focus, textarea#description:active,
+textarea#group_description:focus, textarea#group_description:active{
+     outline: none;
+     background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+     background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
+     -webkit-background-size: 100% 2px, 100% 1px;
+             background-size: 100% 2px, 100% 1px;
+     -webkit-box-shadow: none;
+             box-shadow: none;
+     -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+             transition-duration: 0.3s;
+}
+#title-wrap #title{
+    padding: 7px 0;
+}
+
+input[type=checkbox] + .checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 3px;
+}
+
+input[type=checkbox] + .checkbox-material:before {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.84);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  -webkit-transform: scale3d(2.3, 2.3, 1);
+          transform: scale3d(2.3, 2.3, 1);
+}
+input[type=checkbox] + .checkbox-material .check {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0,0,0, .54);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+input[type=checkbox] + .checkbox-material .check:before {
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: block;
+  margin-top: -4px;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: 0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0 inset;
+          box-shadow: 0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0 inset;
+  -webkit-animation: checkbox-off;
+       -o-animation: checkbox-off;
+          animation: checkbox-off;
+}
+input[type=checkbox]:focus + .checkbox-material .check:after {
+  opacity: 0.2;
+}
+input[type=checkbox]:checked + .checkbox-material .check {
+  color: #009688;
+  border-color: #009688;
+}
+input[type=checkbox]:checked + .checkbox-material .check:before {
+  color: #009688;
+  -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+          box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  -webkit-animation: checkbox-on 0.3s forwards;
+       -o-animation: checkbox-on 0.3s forwards;
+          animation: checkbox-on 0.3s forwards;
+}
+input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn;
+       -o-animation: rippleOn;
+          animation: rippleOn;
+}
+input[type=checkbox]:checked + .checkbox-material .check:after {
+  -webkit-animation: rippleOn 500ms forwards;
+       -o-animation: rippleOn 500ms forwards;
+          animation: rippleOn 500ms forwards;
+}
+input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff;
+       -o-animation: rippleOff;
+          animation: rippleOff;
+}
+input[type=checkbox]:not(:checked) + .checkbox-material .check:after {
+  -webkit-animation: rippleOff 500ms forwards;
+       -o-animation: rippleOff 500ms forwards;
+          animation: rippleOff 500ms forwards;
+}
+
+input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check:before,
+input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check,
+input[type=checkbox][disabled] + .circle {
+  opacity: 0.5;
+}
+input[type=checkbox][disabled] + .checkbox-material .check:after {
+  background-color: rgba(0,0,0, 0.87);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.is-focused .checkbox-material .check:before {
+  -webkit-animation: checkbox-off 0.3s forwards;
+       -o-animation: checkbox-off 0.3s forwards;
+          animation: checkbox-off 0.3s forwards;
+}
+.is-focused input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn 500ms;
+       -o-animation: rippleOn 500ms;
+          animation: rippleOn 500ms;
+}
+.is-focused input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff 500ms;
+       -o-animation: rippleOff 500ms;
+          animation: rippleOff 500ms;
+}
+@-webkit-keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-o-keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-webkit-keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@-o-keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -o-transform: rotate(45deg);
+       transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@-webkit-keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+input[type=radio] ~ span{
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 2px;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  box-sizing: border-box;
+}
+input[type=radio] ~ .circle {
+  border: 2px solid rgba(0,0,0, .54);
+  height: 17px;
+  width: 17px;
+  border-radius: 100%;
+}
+input[type=radio] ~ .check {
+  left: -17px;
+  height: 17px;
+  width: 17px;
+  border-radius: 100%;
+  background-color: #009688;
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
+}
+input[type=radio] ~ .check:after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: rgba(0,0,0, 0.87);
+  left: -17px;
+  top: -17px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  -webkit-transform: scale3d(1.5, 1.5, 1);
+          transform: scale3d(1.5, 1.5, 1);
+}
+label input[type=radio]:not(:checked) ~ .check:after {
+  -webkit-animation: rippleOff 500ms;
+       -o-animation: rippleOff 500ms;
+          animation: rippleOff 500ms;
+}
+label input[type=radio]:checked ~ .check:after {
+  -webkit-animation: rippleOn;
+       -o-animation: rippleOn;
+          animation: rippleOn;
+}
+input[type=radio]:checked ~ .check,
+input[type=radio]:checked ~ .circle {
+  opacity: 1;
+}
+input[type=radio]:checked ~ .check {
+  background-color: #009688;
+}
+input[type=radio]:checked ~ .circle {
+  border-color: #009688;
+}
+input[type=radio]:checked ~ .check {
+  -webkit-transform: scale3d(0.55, 0.55, 1);
+          transform: scale3d(0.55, 0.55, 1);
+}
+input[type=radio][disabled] ~ .check,
+input[type=radio][disabled] ~ .circle {
+  opacity: 0.26;
+}
+input[type=radio][disabled] ~ .check {
+  background-color: #000000;
+}
+input[type=radio][disabled] ~ .circle {
+  border-color: #000000;
+}
+.is-focused input[type=radio]:checked ~ .check:after {
+  -webkit-animation: rippleOn 500ms;
+       -o-animation: rippleOn 500ms;
+          animation: rippleOn 500ms;
+}
+/**
+* Tabs
+*/
+.contextual-help-tabs .active{
+    border: 0;
+}
+
+.nav-tab{
+    color: #1f1f1f;
+    border: 0;
+    position: relative;
+    padding-bottom: 7px;
+    background-color: transparent;
+   -webkit-transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   transition: color .3s ease-in-out;
+}
+.about-wrap h2 .nav-tab-active, 
+.nav-tab-active, .nav-tab:hover,
+.nav-tab:focus{
+    box-shadow: none;
+}
+.about-wrap h2 .nav-tab-active:before, 
+.nav-tab-active:before, .nav-tab:hover:before,
+.nav-tab:focus:before, .nav-tab:focus:after,
+.about-wrap h2 .nav-tab-active:after, 
+.nav-tab-active:after, .nav-tab:hover:after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    box-sizing: border-box;
+    -webkit-transition:opacity .3s ease-in-out;
+    -moz-transition:opacity .3s ease-in-out;
+    transition:opacity .3s ease-in-out;
+}
+
+.about-wrap h2 .nav-tab-active:before, 
+.nav-tab-active:before, .nav-tab:hover:before,
+.nav-tab:focus:before{
+    border-bottom: 12px solid #ccc;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    right:39%;
+}
+.about-wrap h2 .nav-tab-active:after, 
+.nav-tab-active:after, .nav-tab:hover:after,
+.nav-tab:focus:after{
+    border-bottom: 11px solid #fff;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    right:40%;
+}
+.nav-tab:not(.nav-tab-active):after,
+.nav-tab:not(.nav-tab-active):before{
+    content: "";
+    opacity: 0;
+}
+
+.nav-tab:hover:after, .nav-tab:focus:after,
+.nav-tab:hover:before, .nav-tab:focus:before{
+    opacity: 1;
+}
+
+.about-wrap h2 .nav-tab-active, .nav-tab-active,
+.nav-tab-active:hover, .nav-tab-active:focus,
+.nav-tab:focus, .nav-tab:active, .nav-tab:hover{
+    background-color: transparent;
+}
+.nav-tab-active:hover, .nav-tab-active:focus,
+.nav-tab:focus, .nav-tab:active, .nav-tab:hover{
+    border-color: transparent;
+}
+
+/**
+* Admin Bar
+*/
+#wpadminbar{
+    height: 44px;
+}
+#wpadminbar .quicklinks .ab-empty-item, 
+#wpadminbar .quicklinks a, #wpadminbar .shortlink-input{
+    height: 44px;
+}
+#wpadminbar #wp-admin-bar-my-account.with-avatar>.ab-empty-item img, 
+#wpadminbar #wp-admin-bar-my-account.with-avatar>a img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+} 
+#wpadminbar .quicklinks li#wp-admin-bar-bp-notifications>a,
+#wpadminbar .quicklinks>ul>li>.ab-item{
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+/** Logo Image */
+li#wp-admin-bar-wp-logo img{
+    width: 44px;
+    height: 44px;
+}
+#wpadminbar .menupop .ab-sub-wrapper{
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+#wp-admin-bar-user-info img.avatar{
+    height: 90px;
+    width: 72px;
+    border-radius: 50% / 50%;
+    border: 1px solid #fffcf5;
+}
+#wp-admin-bar-user-info img.avatar:hover,
+#wp-admin-bar-user-info img.avatar:focus{
+    border: 1px solid #fffcf5;
+}
+#wpadminbar #wp-admin-bar-wp-logo .ab-icon,
+#wpadminbar #wp-admin-bar-wp-logo .ab-item:before, 
+#wpadminbar>#wp-toolbar>#wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon{
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+}
+/**
+* Admin Menu
+*/
+#adminmenu li.wp-menu-separator{
+    margin: 0;
+    height: 1px;
+}
+/**
+* Content Body
+*/
+#wpbody{
+    position: relative;
+    top: 12px;
+}
+/**
+* Progress Bar
+*/
+.media-item .progress{
+    height: 4px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: #c8c8c8;
+}
+
+.media-item .progress .percent{
+    -webkit-transition: width .6s ease;
+         -o-transition: width .6s ease;
+            transition: width .6s ease;
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+}
+
+/**
+* Alerts
+*/
+.notice-success, div.updated{
+    background-color: #4caf50;
+    color: rgba(255,255,255, 0.84);
+    border: 0;
+}
+.notice-error, div.error{
+    background-color: #f44336;
+    color: rgba(255,255,255, 0.84);
+    border: 0;
+}
+.update-nag, #update-nag{
+    background-color: #f3f356;
+    color: rgba(255, 255, 255, 0.84);
+    border: 0;
+}
+/**
+* Pagination
+*/
+.tablenav .tablenav-pages a.next-page{
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.tablenav .tablenav-pages a.prev-page{
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/**
+* Javascripted selector
+*/
+.js input[type=checkbox]{
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+    width: 1;
+    min-width: 0;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    pointer-events: none;
+    border: 0;
+}
+.js input[type=radio]{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.js input[type=radio]:checked:before{
+    margin: 0;
+    width: 0;
+    height: 0;
+}
+#welcome-panel h2,#welcome-panel h3,#welcome-panel h4,
+.postbox,.widgets-holder-wrap h3,.widgets-holder-wrap h4,
+.widgets-holder-wrap.description,#post-body p,.manage-menus,
+.card,.card h3,.card h4,.card h2,.notice-success, div.updated,
+.popular-tags, .highlight .nonessential,#pass-strength-result.short,
+.contextual-help-tabs-wrap, .contextual-help-sidebar,
+.contextual-help-sidebar h5, #screen-options-wrap,
+#screen-options-wrap h5, .uploader-inline h3,.uploader-inline, 
+#wp-link, .welcome-panel, .postbox-container .subsubsub a .count,
+.widget-inside,.accordion-section-content,.accordion-section-title,
+h3.accordion-section-title,#pass-strength-result, div.error,
+.widgets-chooser li, #update-nag, .update-nag,#poststuff .stuffbox>h3,
+#poststuff h2, #poststuff h3,#poststuff h3.hndle,.postbox *:not(a):before,
+#available-widgets .widget .widget-top h3,.sidebar-name h2,
+.sidebar-name h3,#widgets-right a.widget-control-edit,
+.field-group fieldset,.media-modal-content h2,#titlediv #title,
+.media-modal-content h3, .postbox *:not(a), #themezip,option{
+    color:#1F1F1F;
+ }

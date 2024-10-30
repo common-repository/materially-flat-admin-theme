@@ -1,0 +1,67 @@
+.login form{
+	background-color: #66071D;
+}
+.login form label, .login form *{
+	color: #fff;
+}
+.login form input[type=checkbox]:checked:before {
+  color: #66071D;
+}
+
+.login form input[type=radio]:checked:before {
+  background: #66071D;
+}
+.login form input[type=text], .login form input[type=email], .login form input[type=url],
+.login form input[type=search], .login form input[type=password], .login form input[type=tel],
+.login form input[type=number], .login form select, .login form select[multiple],
+.login form textarea{
+    background-image: -webkit-gradient(linear, right top, right bottom, from(#66071D), to(#66071D)), -webkit-gradient(linear, right top, right bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#66071D, #66071D), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#66071D, #66071D), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#66071D, #66071D), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.login form input[type=text]:focus, .login form input[type=text]:active,
+.login form input[type=email]:focus, .login form input[type=email]:active,
+.login form input[type=url]:focus, .login form input[type=url]:active,
+.login form input[type=search]:focus, .login form input[type=search]:active,
+.login form input[type=password]:focus, .login form input[type=password]:active,
+.login form input[type=number]:focus, .login form input[type=number]:active,
+.login form input[type=tel]:focus, .login form input[type=tel]:active,
+.login form select:focus, .login form select:active, .login form select[multiple]:focus,
+.login form select[multiple]:active, .login form textarea:focus, .login form textarea:active{
+     background-image: -webkit-gradient(linear, right top, right bottom, from(#66071D), to(#66071D)), -webkit-gradient(linear, right top, right bottom, from(#D2D2D2), to(#D2D2D2));
+     background-image: -webkit-linear-gradient(#66071D, #66071D), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: -o-linear-gradient(#66071D, #66071D), -o-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: linear-gradient(#66071D, #66071D), linear-gradient(#D2D2D2, #D2D2D2);
+}
+
+.login form input[type=checkbox]:checked + .checkbox-material .check {
+  color: white;
+  border-color: white;
+}
+
+.login form input[type=checkbox]:checked + .checkbox-material .check:before {
+  color: white;
+}
+
+.wp-core-ui .button-primary{
+  background: #66071D;
+  border-color: white;
+  color: white;
+  text-shadow: none;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:active{
+  background: white;
+  border-color: #66071D;
+  color:#66071D;
+  text-shadow: none;
+}
+
+.login form .input, .login form input[type=checkbox], .login input[type=text]{
+	background-color: #97707e;
+	color: #fff;
+}
+

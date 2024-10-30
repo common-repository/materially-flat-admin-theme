@@ -1,0 +1,610 @@
+html, #wpwrap {
+  background: #fff;
+}
+
+/* Links */ 
+a {
+  color: #0073aa;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0096dd;
+}
+
+#media-upload a.del-link:hover,
+div.dashboard-widget-submit input:hover,
+.subsubsub a:hover,
+.subsubsub a.current:hover {
+  color: #0096dd;
+}
+
+.wp-core-ui input[type="reset"]:hover,
+.wp-core-ui input[type="reset"]:active {
+  color: #0096dd;
+}
+
+/**
+* Ripples
+*/
+.withripple {
+  position: relative;
+}
+.ripple-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+       -o-transform-origin: 50%;
+          transform-origin: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.ripple.ripple-on {
+  -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+       -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+          transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  opacity: 0.1;
+}
+.ripple.ripple-out {
+  -webkit-transition: opacity 0.1s linear 0s !important;
+       -o-transition: opacity 0.1s linear 0s !important;
+          transition: opacity 0.1s linear 0s !important;
+  opacity: 0;
+}
+/**
+* Link
+*/
+a{
+    text-decoration: none;
+}
+/**
+    Login Form
+*/
+.login form{
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    border: 0;
+}
+/**
+* Buttons
+*/
+.wp-core-ui .button-primary,
+.wp-core-ui .button-secondary{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.wp-core-ui .button-primary{
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    will-change: box-shadow, transform;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.wp-core-ui .button-primary:active, .wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:hover{
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+/**
+* Input Box and TextArea
+*/
+.login form input[type=text], .login form input[type=email], .login form input[type=url],
+.login form input[type=search], .login form input[type=password], .login form input[type=tel],
+.login form input[type=number], .login form select, .login form select[multiple],
+.login form textarea{
+    border: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
+    -webkit-background-size: 0 2px, 100% 1px;
+            background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center -webkit-calc(100% - 1px);
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background 0s ease-out;
+        -o-transition: background 0s ease-out;
+            transition: background 0s ease-out;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    padding: 7px 2px;
+}
+.login form input[type=text]:focus, .login form input[type=text]:active,
+.login form input[type=email]:focus, .login form input[type=email]:active,
+.login form input[type=url]:focus, .login form input[type=url]:active,
+.login form input[type=search]:focus, .login form input[type=search]:active,
+.login form input[type=password]:focus, .login form input[type=password]:active,
+.login form input[type=number]:focus, .login form input[type=number]:active,
+.login form input[type=tel]:focus, .login form input[type=tel]:active,
+.login form select:focus, .login form select:active, .login form select[multiple]:focus,
+.login form select[multiple]:active, .login form textarea:focus, .login form textarea:active{
+     outline: none;
+     background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+     background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
+     -webkit-background-size: 100% 2px, 100% 1px;
+             background-size: 100% 2px, 100% 1px;
+     -webkit-box-shadow: none;
+             box-shadow: none;
+     -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+             transition-duration: 0.3s;
+}
+
+.login form input[type=checkbox] + .checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 3px;
+}
+
+.login form input[type=checkbox] + .checkbox-material:before {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.84);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  -webkit-transform: scale3d(2.3, 2.3, 1);
+          transform: scale3d(2.3, 2.3, 1);
+}
+.login form input[type=checkbox] + .checkbox-material .check {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0,0,0, .54);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.login form input[type=checkbox] + .checkbox-material .check:before {
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: block;
+  margin-top: -4px;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: 0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0 inset;
+          box-shadow: 0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0 inset;
+  -webkit-animation: checkbox-off;
+       -o-animation: checkbox-off;
+          animation: checkbox-off;
+}
+.login form input[type=checkbox]:focus + .checkbox-material .check:after {
+  opacity: 0.2;
+}
+.login form input[type=checkbox]:checked + .checkbox-material .check {
+  color: #009688;
+  border-color: #009688;
+}
+.login form input[type=checkbox]:checked + .checkbox-material .check:before {
+  color: #009688;
+  -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+          box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  -webkit-animation: checkbox-on 0.3s forwards;
+       -o-animation: checkbox-on 0.3s forwards;
+          animation: checkbox-on 0.3s forwards;
+}
+.login form input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn;
+       -o-animation: rippleOn;
+          animation: rippleOn;
+}
+.login form input[type=checkbox]:checked + .checkbox-material .check:after {
+  -webkit-animation: rippleOn 500ms forwards;
+       -o-animation: rippleOn 500ms forwards;
+          animation: rippleOn 500ms forwards;
+}
+.login form input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff;
+       -o-animation: rippleOff;
+          animation: rippleOff;
+}
+.login form input[type=checkbox]:not(:checked) + .checkbox-material .check:after {
+  -webkit-animation: rippleOff 500ms forwards;
+       -o-animation: rippleOff 500ms forwards;
+          animation: rippleOff 500ms forwards;
+}
+
+.login form input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check:before,
+.login form input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check,
+.login form input[type=checkbox][disabled] + .circle {
+  opacity: 0.5;
+}
+.login form input[type=checkbox][disabled] + .checkbox-material .check:after {
+  background-color: rgba(0,0,0, 0.87);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.login form .is-focused .checkbox-material .check:before {
+  -webkit-animation: checkbox-off 0.3s forwards;
+       -o-animation: checkbox-off 0.3s forwards;
+          animation: checkbox-off 0.3s forwards;
+}
+.login form .is-focused input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn 500ms;
+       -o-animation: rippleOn 500ms;
+          animation: rippleOn 500ms;
+}
+.login form .is-focused input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff 500ms;
+       -o-animation: rippleOff 500ms;
+          animation: rippleOff 500ms;
+}
+@-webkit-keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-o-keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-webkit-keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@-o-keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -o-transform: rotate(45deg);
+       transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@-webkit-keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/**
+* Alerts
+*/
+.login .message{
+    background-color: #3080af;
+    color: rgba(255,255,255, 0.84);
+    border: 0;
+}
+.login #login_error{
+    background-color: #f44336;
+    color: rgba(255,255,255, 0.84);
+}
+/**
+* Javascripted classes
+*/
+.js .login form input[type=checkbox]{
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+    width: 1;
+    min-width: 0;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    pointer-events: none;
+    border: 0;
+}
+
+.js .login form input[type=radio]:checked:before{
+    margin: 0;
+    width: 0;
+    height: 0;
+}

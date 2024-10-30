@@ -1,0 +1,27 @@
+@import "login-variables.scss";
+
+html, body.login{
+    background-image: url($background-image);
+    background-size: cover;
+}
+
+.login{
+    
+    *{
+        color: $font-color;
+    }
+    
+    #backtoblog, #nav{
+        a{
+            color: $link-color;
+            
+            &:hover, &:focus, &:active{
+                color: $hover-link-color;
+            }
+        }
+    }
+}
+
+body{
+    font-family: $font-style, Helvetica, sans-serif;
+}

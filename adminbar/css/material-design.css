@@ -1,0 +1,673 @@
+/**
+* Ripples
+*/
+#wpadminbar .withripple {
+  position: relative;
+}
+#wpadminbar .ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+#wpadminbar .ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+       -o-transform-origin: 50%;
+          transform-origin: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+#wpadminbar .ripple.ripple-on {
+  -webkit-transition: opacity 0.15s ease-in 0s, -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+       -o-transition: opacity 0.15s ease-in 0s, -o-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+          transition: opacity 0.15s ease-in 0s, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  opacity: 0.1;
+}
+#wpadminbar .ripple.ripple-out {
+  -webkit-transition: opacity 0.1s linear 0s !important;
+       -o-transition: opacity 0.1s linear 0s !important;
+          transition: opacity 0.1s linear 0s !important;
+  opacity: 0;
+}
+
+/**
+* Input Box and TextArea
+*/
+#wpadminbar .form-table td fieldset label.mfat-wrapping, 
+#wpadminbar .columns-prefs label.mfat-wrapping{
+    margin: 0 0 0 0!important;
+    padding: 0 0 0 0!important;
+}
+#wpadminbar input[type=text], #wpadminbar input[type=email], #wpadminbar input[type=url],
+#wpadminbar input[type=search], #wpadminbar input[type=password], #wpadminbar input[type=tel],
+#wpadminbar input[type=number], #wpadminbar select, #wpadminbar select[multiple]{
+    border: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
+    -webkit-background-size: 0 2px, 100% 1px;
+            background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center -webkit-calc(100% - 1px);
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background 0s ease-out;
+        -o-transition: background 0s ease-out;
+            transition: background 0s ease-out;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    padding: 7px 2px;
+}
+#wpadminbar input[type=text]:focus, #wpadminbar input[type=text]:active,
+#wpadminbar input[type=email]:focus, #wpadminbar input[type=email]:active,
+#wpadminbar input[type=url]:focus, #wpadminbar input[type=url]:active,
+#wpadminbar input[type=search]:focus, #wpadminbar input[type=search]:active,
+#wpadminbar input[type=password]:focus, #wpadminbar input[type=password]:active,
+#wpadminbar input[type=number]:focus, #wpadminbar input[type=number]:active,
+#wpadminbar input[type=tel]:focus, #wpadminbar input[type=tel]:active,
+#wpadminbar select:focus, #wpadminbar select:active, #wpadminbar select[multiple]:focus,
+#wpadminbar select[multiple]:active{
+     outline: none;
+     background-image: -webkit-gradient(linear, left top, left bottom, from(#009688), to(#009688)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+     background-image: -webkit-linear-gradient(#009688, #009688), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: -o-linear-gradient(#009688, #009688), -o-linear-gradient(#D2D2D2, #D2D2D2);
+     background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
+     -webkit-background-size: 100% 2px, 100% 1px;
+             background-size: 100% 2px, 100% 1px;
+     -webkit-box-shadow: none;
+             box-shadow: none;
+     -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+             transition-duration: 0.3s;
+}
+#wpadminbar input[type=checkbox] + .checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 3px;
+}
+
+#wpadminbar input[type=checkbox] + .checkbox-material:before {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.84);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  -webkit-transform: scale3d(2.3, 2.3, 1);
+          transform: scale3d(2.3, 2.3, 1);
+}
+#wpadminbar input[type=checkbox] + .checkbox-material .check {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0,0,0, .54);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+}
+#wpadminbar input[type=checkbox] + .checkbox-material .check:before {
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: block;
+  margin-top: -4px;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: 0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0 inset;
+          box-shadow: 0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0,
+        0 0 0 0 inset;
+  -webkit-animation: checkbox-off;
+       -o-animation: checkbox-off;
+          animation: checkbox-off;
+}
+#wpadminbar input[type=checkbox]:focus + .checkbox-material .check:after {
+  opacity: 0.2;
+}
+#wpadminbar input[type=checkbox]:checked + .checkbox-material .check {
+  color: #009688;
+  border-color: #009688;
+}
+#wpadminbar input[type=checkbox]:checked + .checkbox-material .check:before {
+  color: #009688;
+  -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+          box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  -webkit-animation: checkbox-on 0.3s forwards;
+       -o-animation: checkbox-on 0.3s forwards;
+          animation: checkbox-on 0.3s forwards;
+}
+#wpadminbar input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn;
+       -o-animation: rippleOn;
+          animation: rippleOn;
+}
+#wpadminbar input[type=checkbox]:checked + .checkbox-material .check:after {
+  -webkit-animation: rippleOn 500ms forwards;
+       -o-animation: rippleOn 500ms forwards;
+          animation: rippleOn 500ms forwards;
+}
+#wpadminbar input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff;
+       -o-animation: rippleOff;
+          animation: rippleOff;
+}
+#wpadminbar input[type=checkbox]:not(:checked) + .checkbox-material .check:after {
+  -webkit-animation: rippleOff 500ms forwards;
+       -o-animation: rippleOff 500ms forwards;
+          animation: rippleOff 500ms forwards;
+}
+
+#wpadminbar input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check:before,
+#wpadminbar input[type=checkbox][disabled]:not(:checked) ~ .checkbox-material .check,
+#wpadminbar input[type=checkbox][disabled] + .circle {
+  opacity: 0.5;
+}
+#wpadminbar input[type=checkbox][disabled] + .checkbox-material .check:after {
+  background-color: rgba(0,0,0, 0.87);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#wpadminbar .is-focused .checkbox-material .check:before {
+  -webkit-animation: checkbox-off 0.3s forwards;
+       -o-animation: checkbox-off 0.3s forwards;
+          animation: checkbox-off 0.3s forwards;
+}
+#wpadminbar .is-focused input[type=checkbox]:checked + .checkbox-material:before {
+  -webkit-animation: rippleOn 500ms;
+       -o-animation: rippleOn 500ms;
+          animation: rippleOn 500ms;
+}
+#wpadminbar .is-focused input[type=checkbox]:not(:checked) + .checkbox-material:before {
+  -webkit-animation: rippleOff 500ms;
+       -o-animation: rippleOff 500ms;
+          animation: rippleOff 500ms;
+}
+@-webkit-keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-o-keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+@-webkit-keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@-o-keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -o-transform: rotate(45deg);
+       transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -o-transform: rotate(0deg);
+       transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    -webkit-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+  }
+  51% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 10px inset;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    -webkit-box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+            box-shadow: 0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0 0 0 inset;
+  }
+}
+@-webkit-keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#wpadminbar input[type=radio] ~ span{
+  display: inline-block;
+  position: relative;
+  left: 0;
+  top: 2px;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  box-sizing: border-box;
+}
+#wpadminbar input[type=radio] ~ .circle {
+  border: 2px solid rgba(0,0,0, .54);
+  height: 17px;
+  width: 17px;
+  border-radius: 100%;
+}
+#wpadminbar input[type=radio] ~ .check {
+  left: -17px;
+  height: 17px;
+  width: 17px;
+  border-radius: 100%;
+  background-color: #009688;
+  -webkit-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
+}
+#wpadminbar input[type=radio] ~ .check:after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: rgba(0,0,0, 0.87);
+  left: -17px;
+  top: -17px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  z-index: 1;
+  opacity: 0;
+  margin: 0;
+  -webkit-transform: scale3d(1.5, 1.5, 1);
+          transform: scale3d(1.5, 1.5, 1);
+}
+#wpadminbar label input[type=radio]:not(:checked) ~ .check:after {
+  -webkit-animation: rippleOff 500ms;
+       -o-animation: rippleOff 500ms;
+          animation: rippleOff 500ms;
+}
+#wpadminbar label input[type=radio]:checked ~ .check:after {
+  -webkit-animation: rippleOn;
+       -o-animation: rippleOn;
+          animation: rippleOn;
+}
+#wpadminbar input[type=radio]:checked ~ .check,
+#wpadminbar input[type=radio]:checked ~ .circle {
+  opacity: 1;
+}
+#wpadminbar input[type=radio]:checked ~ .check {
+  background-color: #009688;
+}
+#wpadminbar input[type=radio]:checked ~ .circle {
+  border-color: #009688;
+}
+#wpadminbar input[type=radio]:checked ~ .check {
+  -webkit-transform: scale3d(0.55, 0.55, 1);
+          transform: scale3d(0.55, 0.55, 1);
+}
+#wpadminbar input[type=radio][disabled] ~ .check,
+#wpadminbar input[type=radio][disabled] ~ .circle {
+  opacity: 0.26;
+}
+#wpadminbar input[type=radio][disabled] ~ .check {
+  background-color: #000000;
+}
+#wpadminbar input[type=radio][disabled] ~ .circle {
+  border-color: #000000;
+}
+#wpadminbar .is-focused input[type=radio]:checked ~ .check:after {
+  -webkit-animation: rippleOn 500ms;
+       -o-animation: rippleOn 500ms;
+          animation: rippleOn 500ms;
+}
+
+#wpadminbar{
+    height: 44px;
+}
+#wpadminbar .quicklinks .ab-empty-item, 
+#wpadminbar .quicklinks a, #wpadminbar .shortlink-input{
+    height: 44px;
+}
+#wpadminbar #wp-admin-bar-my-account.with-avatar>.ab-empty-item img, 
+#wpadminbar #wp-admin-bar-my-account.with-avatar>a img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+} 
+#wpadminbar .quicklinks li#wp-admin-bar-bp-notifications>a,
+#wpadminbar .quicklinks>ul>li>.ab-item{
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+/** Logo Image */
+li#wp-admin-bar-wp-logo img{
+    width: 44px;
+    height: 44px;
+}
+#wpadminbar .menupop .ab-sub-wrapper{
+    border: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+#wp-admin-bar-user-info img.avatar{
+    height: 90px;
+    width: 72px;
+    border-radius: 50% / 50%;
+    border: 1px solid #fffcf5;
+}
+#wp-admin-bar-user-info img.avatar:hover,
+#wp-admin-bar-user-info img.avatar:focus{
+    border: 1px solid #fffcf5;
+}
+
+#wpadminbar #adminbarsearch{
+    top: 7px;
+}
+#wpadminbar #wp-admin-bar-wp-logo .ab-icon,
+#wpadminbar #wp-admin-bar-wp-logo .ab-item:before, 
+#wpadminbar>#wp-toolbar>#wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon{
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+}
+/**
+* Javascripted selector
+*/
+.js #wpadminbar input[type=checkbox]{
+    position: absolute;
+    margin: 0;
+    z-index: -1;
+    width: 1;
+    min-width: 0;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    pointer-events: none;
+    border: 0;
+}
+.js #wpadminbar input[type=radio]{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.js #wpadminbar input[type=radio]:checked:before{
+    margin: 0;
+    width: 0;
+    height: 0;
+}

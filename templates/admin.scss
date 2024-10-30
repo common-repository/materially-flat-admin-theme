@@ -1,0 +1,44 @@
+@import "admin-variables.scss";
+
+html, #wpwrap{
+    background-image: url($background-image);
+    background-size: cover;
+}
+
+#adminmenu{
+    margin-top: 36px;
+}
+
+body, h1, h2, h3, h4, h5, h6, .wrap h1, .wrap h2, .form-table th,
+.form-wrap label, .form-wrap p, .description, p.description, #wpfooter,
+.about-wrap h1, .about-wrap .about-text, .about-wrap h4, 
+.drag-drop-inside p, #upload-form label, input[type=text], input[type=email],
+input[type=url], input[type=search], input[type=password], input[type=tel],
+input[type=number], select, select[multiple], textarea, .form-field input[type=text],
+.form-field input[type=password], .form-field input[type=email], .form-field input[type=number],
+.form-field input[type=tel], .form-field input[type=url], .form-field input[type=search],
+.form-field select, .form-field select[multiple], .form-field textarea,
+option[selected=selected], #available-widgets .widget-description, .subtitle,
+.widgets-holder-wrap .description, .no-plugin-results, .in-widget-title,
+.widgets-holder-wrap .widget-holder .description, #available-widgets .widget-description,
+#available-widgets h3, #wp_inactive_widgets h3, .subsubsub a .count, 
+.subsubsub a.current .count, #wpbody, .nonessential, .tablenav .displaying-num,
+.media-frame.mode-grid .attachments-browser .no-media, #edit-slug-box, 
+.wp_attachment_details.edit-form-section p, .nav-tab, .upload-plugin .install-help,
+.upload-theme .install-help{
+    color: $font-color;
+}
+
+a,.ac_match,.subsubsub a.current, .plugins .inactive a, .postbox a *{
+    color: $link-color;
+}
+
+a, .subsubsub a, .subsubsub a.current, .plugins .inactive a, #media-upload a.del-link, div.dashboard-widget-submit input{
+    &:hover, &:focus, &:active{
+        color: $hover-link-color;
+    }
+}
+
+body, #wpadminbar *{
+    font-family: $font-style, Helvetica, sans-serif;
+}

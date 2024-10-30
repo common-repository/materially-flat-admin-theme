@@ -1,0 +1,34 @@
+html, #wpwrap{
+	background-size: cover;
+}
+.wp-filter, .wrap .add-new-h2, .wrap .page-title-action, .postbox, #screen-meta, table.widefat, .widgets-holder-wrap, #menu-management, .manage-menus, .popular-tags, p.popular-tags, .card, #activity-widget #the-comment-list .comment-item, .highlight, .notice-success, div.updated, .plugins tr{
+	background-color: rgba(252, 252, 252, 0.6);
+}
+.welcome-panel{
+	color: #1F1F1F;
+	background-color: rgba(252, 252, 252, 0.9);
+}
+.wrap .add-new-h2:hover, .wrap .add-new-h2:active,
+.wrap .page-title-action:active, .wrap .page-title-action:hover,
+#add-new-comment a:hover,.tablenav .tablenav-pages a:hover,
+.tablenav .tablenav-pages a:focus{
+	background-color: rgba(66, 89, 143, 0.6);
+}
+#wpadminbar{
+	background-color: rgba(30, 54, 84, 0.7);
+}
+#adminmenuwrap, #adminmenuback{
+	background: transparent;
+}
+#adminmenu{
+	background-color: rgba(66, 89, 143, 0.7);
+}
+.notice-success, div.updated{
+    background-color:rgba(76, 175, 80, 0.6);
+}
+.notice-error, div.error{
+    background-color: rgba(244, 67, 54, 0.6);
+}
+.update-nag, #update-nag{
+    background-color: rgba(243, 243, 86, 0.7);
+}
